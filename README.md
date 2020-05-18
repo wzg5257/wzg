@@ -1,43 +1,9 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@wzg5257 
-wzg5257
-/
-wzg
-1
-00
- Code
- Issues 0
- Pull requests 0 Actions
- Projects 0
- Wiki
- Security 0
- Insights
- Settings
-sdfsdf
- 8 commits
- 1 branch
- 0 packages
- 0 releases
- 1 contributor
-Latest commit
-@wzg5257
-wzg5257 Update README.md
-Latest commit
-3e4eb98
-2 days ago
-Files
-Type	Name	Latest commit message	Commit time
-README.md	Update README.md	2 days ago
-shishi.ini	Create shishi.ini	8 days ago
- README.md
-port: 7890 socks-port: 7891 allow-lan: true mode: Rule log-level: info external-controller: 127.0.0.1:9090 cfw-bypass:
+port: 7890
+socks-port: 7891 
+allow-lan: true 
+mode: Rule 
+log-level: info 
+external-controller: 127.0.0.1:9090 cfw-bypass:
 
 qq.com
 music.163.com
