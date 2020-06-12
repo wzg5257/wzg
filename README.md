@@ -3,214 +3,171 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
-cfw-bypass:
-  - qq.com
-  - music.163.com
-  - "*.music.126.net"
-  - localhost
-  - 127.*
-  - 10.*
-  - 172.16.*
-  - 172.17.*
-  - 172.18.*
-  - 172.19.*
-  - 172.20.*
-  - 172.21.*
-  - 172.22.*
-  - 172.23.*
-  - 172.24.*
-  - 172.25.*
-  - 172.26.*
-  - 172.27.*
-  - 172.28.*
-  - 172.29.*
-  - 172.30.*
-  - 172.31.*
-  - 192.168.*
-  - <local>
-cfw-latency-timeout: 5000
-Proxy:
-   - {name: "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray", server: iplc-sh1-jp1.racernet-node.space, port: 59785, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: false}
-  - {name: "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray", server: iplc-sh1-hk2.racernet-node.space, port: 15795, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: false}
-  - {name: "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray", server: iplc-sz1-hk2.racernet-node.space, port: 58646, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: iplc-sz1-hk2.racernet-node.space}}
-  - {name: "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray", server: iplc-sz-hk2.racernet-node.space, port: 11928, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /racernet, ws-headers: {Host: iplc-sz-hk2.racernet-node.space}}
-  - {name: "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray", server: iplc-suz-jp1.racernet-node.space, port: 24790, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /racernet, ws-headers: {Host: iplc-suz-jp1.racernet-node.space}}
-  - {name: 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray, server: cmgz1.racernet-node.space, port: 53629, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet/cmgz1, ws-headers: {Host: jp1.racernet-node.space}}
-  - {name: 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray, server: cuxz1-de1.racernet-node.space, port: 47748, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuxz1-de1.racernet-node.space}}
-  - {name: 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray, server: cuxz1-jp1.racernet-node.space, port: 37798, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuxz1-jp1.racernet-node.space}}
-  - {name: "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray", server: cmqz1-us5.racernet-node.space, port: 51530, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cmqz1-us5.racernet-node.space}}
-  - {name: "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray", server: cmqz1-us4.racernet-node.space, port: 51530, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cmqz1-us4.racernet-node.space}}
-  - {name: 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray, server: cmqz1-hk4.racernet-node.space, port: 51530, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cmqz1-hk4.racernet-node.space}}
-  - {name: 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray, server: cuhn1-sg1.racernet-node.space, port: 10010, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuhn1-sg1.racernet-node.space}}
-  - {name: "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray", server: cuhn1-us4.racernet-node.space, port: 10013, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuhn1-us4.racernet-node.space}}
-  - {name: "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray", server: cuhn1-us2.racernet-node.space, port: 10012, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 8, cipher: auto, tls: true, network: ws, ws-path: /eewgzpep, ws-headers: {Host: cuhn1-us2.racernet-node.space}}
-  - {name: 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray, server: cuhn1-hk4.racernet-node.space, port: 10004, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuhn1-hk4.racernet-node.space}}
-  - {name: 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix, server: cuhn1-hk2.racernet-node.space, port: 10011, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuhn1-hk2.racernet-node.space}}
-  - {name: "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray", server: sg1.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: sg1.racernet-node.space}}
-  - {name: "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray", server: sg2.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: sg2.racernet-node.space}}
-  - {name: 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray, server: cuhn1-hk1.racernet-node.space, port: 10004, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: cuhn1-hk1.racernet-node.space}}
-  - {name: "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray", server: us2.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /eewgzpep, ws-headers: {Host: us2.racernet-node.space}}
-  - {name: "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray", server: us4.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: us4.racernet-node.space}}
-  - {name: "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6", server: us3.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 8, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: us3.racernet-node.space}}
-  - {name: 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray, server: hk4.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: hk4.racernet-node.space}}
-  - {name: 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix, server: hk2.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 4, cipher: auto, tls: true, network: ws, ws-path: /racernet, ws-headers: {Host: hk2.racernet-node.space}}
-  - {name: 🇯🇵 日本-AWS|V2ray, server: jp1.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /rhwsqaul, ws-headers: {Host: jp1.racernet-node.space}}
-  - {name: 🇺🇸 美国节点-AWS线路|Netflix|V2ray, server: us1.racernet-node.space, port: 443, type: vmess, uuid: 30fc5222-2616-3f7f-ac84-dbb4fb2b4eb4, alterId: 1, cipher: auto, tls: true, network: ws, ws-path: /eewgzpep, ws-headers: {Host: us1.racernet-node.space}}
-Proxy Group:
+external-controller: :9090
+proxies:
+  - {name: 🇨🇳 上海 → 台01 | 1.5x, server: sh01.unicom.lay168.net, port: 61011, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: tw01.vds.nbsd.us}}
+  - {name: 🇯🇵 上海 → 日01 | 1.5x NF, server: sh01.unicom.lay168.net, port: 61012, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp01.az.jinkela.icu}}
+  - {name: 🇯🇵 上海 → 日02 | 1.5x NF, server: sh01.unicom.lay168.net, port: 61005, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp02.az.jinkela.icu}}
+  - {name: 🇯🇵 上海 → 日03 | 1.5x NF, server: sh01.unicom.lay168.net, port: 61015, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp03.az.jinkela.icu}}
+  - {name: 🇭🇰 上海 → 港01 | 1.5x NF, server: sh01.unicom.lay168.net, port: 61006, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: hk01.az.jinkela.icu}}
+  - {name: 🇺🇸 上海 → 美01 | 1.5x NF, server: sh01.unicom.lay168.net, port: 61003, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: us01.az.jinkela.icu}}
+  - {name: 🇰🇷 上海 → 韩01 | 1.5x, server: sh01.unicom.lay168.net, port: 61004, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: kr01.az.jinkela.icu}}
+  - {name: 🇯🇵 山东 → 日03 | 1.5x NF, server: qdcu1-10-9-9-60.cncucloud.com, port: 61015, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp03.az.jinkela.icu}}
+  - {name: 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF, server: qdcu1-10-9-9-60.cncucloud.com, port: 61999, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp.balancer.jinkela.icu}}
+  - {name: 🇭🇰 山东 → 港es01 | 1.5x, server: qdcu1-10-9-9-60.cncucloud.com, port: 61007, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: hk01.es.jinkela.icu}}
+  - {name: 🇺🇸 山东 → 美02 | 1.5x NF, server: qdcu1-10-9-9-60.cncucloud.com, port: 61014, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: us02.az.jinkela.icu}}
+  - {name: 🇸🇬 江苏 → 新01 | 1.5x NF, server: layonhands-cz-01.ddns.moe, port: 61009, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /hls, ws-headers: {Host: sg02.az.jinkela.icu}}
+  - {name: 🇯🇵 江苏 → 日01 | 1.5x NF, server: layonhands-cz-01.ddns.moe, port: 61002, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jp01.li.nbsd.us}}
+  - {name: 🇭🇰 江苏 → 港01 | 1.5x NF, server: layonhands-cz-01.ddns.moe, port: 61006, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /hls, ws-headers: {Host: hk01.az.jinkela.icu}}
+  - {name: 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体, server: layonhands-cz-01.ddns.moe, port: 61001, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: hkt01.vds.nbsd.us}}
+  - {name: 测试|速度看运气|澳洲CDN|0.1x, server: au01.vu.jinkela.pvpgames.net, port: 80, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: au01.vu.jinkela.pvpgames.net}}
+  - {name: 🇨🇳 浙江 → 台01 | 1.5x NF, server: hz01.mobile.lay168.net, port: 61011, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: tw01.vds.nbsd.us}}
+  - {name: 🇸🇬 浙江 → 新01 | 1.5x NF, server: hz01.mobile.lay168.net, port: 61013, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: sg01.az.jinkela.icu}}
+  - {name: 🇭🇰 浙江 → 港HKT01 | 1.5x NF, server: hz01.mobile.lay168.net, port: 61001, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: hkt01.vds.nbsd.us}}
+  - {name: 🇷🇺 直连 → 俄04 | 1x, server: ru04.jh.nbsd.us, port: 8080, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: ru04.jh.nbsd.us}}
+  - {name: 🇷🇺 直连 → 俄05 | 1x, server: ru05.jh.nbsd.us, port: 8080, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: ru05.jh.nbsd.us}}
+  - {name: 🇷🇺 直连 → 俄06 | 1x, server: ru06.jh.jinkela.pvpgames.net, port: 443, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: true, network: ws, ws-path: /hls, ws-headers: {Host: ru06.jh.jinkela.pvpgames.net}}
+  - {name: 🇩🇪 香港 → 德01 | 1.2x, server: hk01.az.lay168.net, port: 61008, type: vmess, uuid: 8ea78f1e-963c-3992-a422-2ac97202c411, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /hls, ws-headers: {Host: jinkela.icu}}
+proxy-groups:
   - name: Proxy
     type: select
     proxies:
-     - "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray"
-      - 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray
-      - 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray
-      - 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray
-      - "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray"
-      - "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray"
-      - 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray
-      - 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray
-      - "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray"
-      - "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray"
-      - 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray
-      - 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray"
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray"
-      - 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray
-      - "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6"
-      - 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray
-      - 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix
-      - 🇯🇵 日本-AWS|V2ray
-      - 🇺🇸 美国节点-AWS线路|Netflix|V2ray
+      - 🇨🇳 上海 → 台01 | 1.5x
+      - 🇯🇵 上海 → 日01 | 1.5x NF
+      - 🇯🇵 上海 → 日02 | 1.5x NF
+      - 🇯🇵 上海 → 日03 | 1.5x NF
+      - 🇭🇰 上海 → 港01 | 1.5x NF
+      - 🇺🇸 上海 → 美01 | 1.5x NF
+      - 🇰🇷 上海 → 韩01 | 1.5x
+      - 🇯🇵 山东 → 日03 | 1.5x NF
+      - 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF
+      - 🇭🇰 山东 → 港es01 | 1.5x
+      - 🇺🇸 山东 → 美02 | 1.5x NF
+      - 🇸🇬 江苏 → 新01 | 1.5x NF
+      - 🇯🇵 江苏 → 日01 | 1.5x NF
+      - 🇭🇰 江苏 → 港01 | 1.5x NF
+      - 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体
+      - 测试|速度看运气|澳洲CDN|0.1x
+      - 🇨🇳 浙江 → 台01 | 1.5x NF
+      - 🇸🇬 浙江 → 新01 | 1.5x NF
+      - 🇭🇰 浙江 → 港HKT01 | 1.5x NF
+      - 🇷🇺 直连 → 俄04 | 1x
+      - 🇷🇺 直连 → 俄05 | 1x
+      - 🇷🇺 直连 → 俄06 | 1x
+      - 🇩🇪 香港 → 德01 | 1.2x
   - name: Domestic
     type: select
     proxies:
       - DIRECT
       - Proxy
-     - "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray"
-      - 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray
-      - 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray
-      - 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray
-      - "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray"
-      - "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray"
-      - 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray
-      - 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray
-      - "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray"
-      - "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray"
-      - 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray
-      - 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray"
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray"
-      - 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray
-      - "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6"
-      - 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray
-      - 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix
-      - 🇯🇵 日本-AWS|V2ray
-      - 🇺🇸 美国节点-AWS线路|Netflix|V2ray
+      - 🇨🇳 上海 → 台01 | 1.5x
+      - 🇯🇵 上海 → 日01 | 1.5x NF
+      - 🇯🇵 上海 → 日02 | 1.5x NF
+      - 🇯🇵 上海 → 日03 | 1.5x NF
+      - 🇭🇰 上海 → 港01 | 1.5x NF
+      - 🇺🇸 上海 → 美01 | 1.5x NF
+      - 🇰🇷 上海 → 韩01 | 1.5x
+      - 🇯🇵 山东 → 日03 | 1.5x NF
+      - 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF
+      - 🇭🇰 山东 → 港es01 | 1.5x
+      - 🇺🇸 山东 → 美02 | 1.5x NF
+      - 🇸🇬 江苏 → 新01 | 1.5x NF
+      - 🇯🇵 江苏 → 日01 | 1.5x NF
+      - 🇭🇰 江苏 → 港01 | 1.5x NF
+      - 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体
+      - 测试|速度看运气|澳洲CDN|0.1x
+      - 🇨🇳 浙江 → 台01 | 1.5x NF
+      - 🇸🇬 浙江 → 新01 | 1.5x NF
+      - 🇭🇰 浙江 → 港HKT01 | 1.5x NF
+      - 🇷🇺 直连 → 俄04 | 1x
+      - 🇷🇺 直连 → 俄05 | 1x
+      - 🇷🇺 直连 → 俄06 | 1x
+      - 🇩🇪 香港 → 德01 | 1.2x
   - name: AsianTV
     type: select
     proxies:
       - DIRECT
       - Domestic
       - Proxy
-      - "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray"
-      - 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray
-      - 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray
-      - 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray
-      - "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray"
-      - "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray"
-      - 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray
-      - 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray
-      - "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray"
-      - "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray"
-      - 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray
-      - 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray"
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray"
-      - 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray
-      - "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6"
-      - 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray
-      - 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix
-      - 🇯🇵 日本-AWS|V2ray
-      - 🇺🇸 美国节点-AWS线路|Netflix|V2ray
+      - 🇨🇳 上海 → 台01 | 1.5x
+      - 🇯🇵 上海 → 日01 | 1.5x NF
+      - 🇯🇵 上海 → 日02 | 1.5x NF
+      - 🇯🇵 上海 → 日03 | 1.5x NF
+      - 🇭🇰 上海 → 港01 | 1.5x NF
+      - 🇺🇸 上海 → 美01 | 1.5x NF
+      - 🇰🇷 上海 → 韩01 | 1.5x
+      - 🇯🇵 山东 → 日03 | 1.5x NF
+      - 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF
+      - 🇭🇰 山东 → 港es01 | 1.5x
+      - 🇺🇸 山东 → 美02 | 1.5x NF
+      - 🇸🇬 江苏 → 新01 | 1.5x NF
+      - 🇯🇵 江苏 → 日01 | 1.5x NF
+      - 🇭🇰 江苏 → 港01 | 1.5x NF
+      - 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体
+      - 测试|速度看运气|澳洲CDN|0.1x
+      - 🇨🇳 浙江 → 台01 | 1.5x NF
+      - 🇸🇬 浙江 → 新01 | 1.5x NF
+      - 🇭🇰 浙江 → 港HKT01 | 1.5x NF
+      - 🇷🇺 直连 → 俄04 | 1x
+      - 🇷🇺 直连 → 俄05 | 1x
+      - 🇷🇺 直连 → 俄06 | 1x
+      - 🇩🇪 香港 → 德01 | 1.2x
   - name: GlobalTV
     type: select
     proxies:
       - Proxy
-      - "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray"
-      - 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray
-      - 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray
-      - 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray
-      - "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray"
-      - "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray"
-      - 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray
-      - 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray
-      - "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray"
-      - "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray"
-      - 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray
-      - 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray"
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray"
-      - 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray
-      - "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6"
-      - 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray
-      - 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix
-      - 🇯🇵 日本-AWS|V2ray
-      - 🇺🇸 美国节点-AWS线路|Netflix|V2ray
+      - 🇨🇳 上海 → 台01 | 1.5x
+      - 🇯🇵 上海 → 日01 | 1.5x NF
+      - 🇯🇵 上海 → 日02 | 1.5x NF
+      - 🇯🇵 上海 → 日03 | 1.5x NF
+      - 🇭🇰 上海 → 港01 | 1.5x NF
+      - 🇺🇸 上海 → 美01 | 1.5x NF
+      - 🇰🇷 上海 → 韩01 | 1.5x
+      - 🇯🇵 山东 → 日03 | 1.5x NF
+      - 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF
+      - 🇭🇰 山东 → 港es01 | 1.5x
+      - 🇺🇸 山东 → 美02 | 1.5x NF
+      - 🇸🇬 江苏 → 新01 | 1.5x NF
+      - 🇯🇵 江苏 → 日01 | 1.5x NF
+      - 🇭🇰 江苏 → 港01 | 1.5x NF
+      - 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体
+      - 测试|速度看运气|澳洲CDN|0.1x
+      - 🇨🇳 浙江 → 台01 | 1.5x NF
+      - 🇸🇬 浙江 → 新01 | 1.5x NF
+      - 🇭🇰 浙江 → 港HKT01 | 1.5x NF
+      - 🇷🇺 直连 → 俄04 | 1x
+      - 🇷🇺 直连 → 俄05 | 1x
+      - 🇷🇺 直连 → 俄06 | 1x
+      - 🇩🇪 香港 → 德01 | 1.2x
   - name: Others
     type: select
     proxies:
       - Proxy
       - DIRECT
-      - "🏳️‍🌈 【VIP】IPLC 沪日专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 沪港专线 #1|20x流量|智能路由|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #1|20x流量|Netflix|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 深港专线 #2|20x流量|V2ray"
-      - "🏳️‍🌈 【VIP】IPLC 苏日专线 #2|20x流量|Netflix|V2ray"
-      - 🇯🇵 【VIP】广州移动-日本 AWS|Netflix|V2ray
-      - 🇩🇪 【VIP】徐州联通-德国|Netflix|V2ray
-      - 🇯🇵 【VIP】徐州联通-日本 AWS-Netflix|V2ray
-      - "🇺🇸 【VIP】泉州移动-美国 #2|Netflix|V2ray"
-      - "🇺🇸 【VIP】泉州移动-美国GIA #1|Netflix|V2ray"
-      - 🇭🇰 【VIP】泉州移动-香港 Azure-Netflix|V2ray
-      - 🇸🇬 【VIP】湖南联通-新加坡阿里云|V2ray
-      - "🇺🇸 【VIP】湖南联通-美国GIA #1|Netflix|V2ray"
-      - "🇬🇧 【VIP】湖南联通-美国GIA #2|英国 Netflix|V2ray"
-      - 🇭🇰 【VIP】湖南联通-香港 Azure-Netflix|V2ray
-      - 🇭🇰 【VIP】湖南联通-香港阿里云|V2ray|Netflix
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #1|V2ray"
-      - "🇸🇬 【一级响应，临时下线】新加坡-阿里云 #2|V2ray"
-      - 🇭🇰 【一级响应，临时下线】湖南联通-香港HKT#2-Netflix|V2ray
-      - "🇬🇧 【一级响应，临时下线】美国-CN2 GIA #2|英国 Netflix|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #1|V2ray"
-      - "🇺🇸 【一级响应，临时下线】美国-GIA #3|V2ray|支持 IPv6"
-      - 🇭🇰 【一级响应，临时下线】香港-Azure-Netflix|V2ray
-      - 🇭🇰 【一级响应，临时下线】香港-阿里云|V2ray|Netflix
-      - 🇯🇵 日本-AWS|V2ray
-      - 🇺🇸 美国节点-AWS线路|Netflix|V2ray
+      - 🇨🇳 上海 → 台01 | 1.5x
+      - 🇯🇵 上海 → 日01 | 1.5x NF
+      - 🇯🇵 上海 → 日02 | 1.5x NF
+      - 🇯🇵 上海 → 日03 | 1.5x NF
+      - 🇭🇰 上海 → 港01 | 1.5x NF
+      - 🇺🇸 上海 → 美01 | 1.5x NF
+      - 🇰🇷 上海 → 韩01 | 1.5x
+      - 🇯🇵 山东 → 日03 | 1.5x NF
+      - 🇯🇵 山东 → 日本 | 智能均衡 | 1.5x NF
+      - 🇭🇰 山东 → 港es01 | 1.5x
+      - 🇺🇸 山东 → 美02 | 1.5x NF
+      - 🇸🇬 江苏 → 新01 | 1.5x NF
+      - 🇯🇵 江苏 → 日01 | 1.5x NF
+      - 🇭🇰 江苏 → 港01 | 1.5x NF
+      - 🇭🇰 江苏 → 港HKT01 | 1.5x 流媒体
+      - 测试|速度看运气|澳洲CDN|0.1x
+      - 🇨🇳 浙江 → 台01 | 1.5x NF
+      - 🇸🇬 浙江 → 新01 | 1.5x NF
+      - 🇭🇰 浙江 → 港HKT01 | 1.5x NF
+      - 🇷🇺 直连 → 俄04 | 1x
+      - 🇷🇺 直连 → 俄05 | 1x
+      - 🇷🇺 直连 → 俄06 | 1x
+      - 🇩🇪 香港 → 德01 | 1.2x
+
 Rule:
  - DOMAIN-SUFFIX,edgedatg.com,GlobalTV
  - DOMAIN-SUFFIX,go.com,GlobalTV
